@@ -1,0 +1,15 @@
+# Update and install Steghide
+sudo apt update
+sudo apt install steghide
+
+# Create a secret message
+echo "The eagle flies at midnight..." > secret.txt
+
+# Embed the message into the cover image
+steghide embed -cf Cover.jpg -ef secret.txt
+
+# Extract the hidden message
+steghide extract -sf Cover.jpg
+
+# View the extracted file
+cat secret.txt

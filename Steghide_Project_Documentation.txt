@@ -1,0 +1,150 @@
+
+===========================
+Steganography with Steghide
+===========================
+
+📁 Project Title:
+Steganography with Steghide (Kali Linux)
+
+📌 Objective:
+This project demonstrates how to hide and extract secret messages using the steganography tool "steghide" on Kali Linux. It's designed for cybersecurity beginners and showcases the process step-by-step.
+
+====================
+🛠 Tools and Setup
+====================
+
+1. Operating System: Kali Linux
+2. Tool: Steghide
+3. Language: Bash (for CLI commands)
+4. Optional: Git & GitHub for version control and project portfolio
+
+===============================
+📥 Step-by-Step Instructions
+===============================
+
+📍 STEP 1: Install Steghide
+-------------------------------
+Open terminal and run:
+
+    sudo apt update
+    sudo apt install steghide
+
+📍 STEP 2: Create Secret Message
+-----------------------------------
+Create a simple secret message text file:
+
+    echo "The eagle flies at midnight..." > secret.txt
+
+📍 STEP 3: Add Cover Image
+------------------------------
+Ensure a JPEG image (e.g., Cover.jpg) is present in your directory.
+
+📍 STEP 4: Embed Secret File into Image
+------------------------------------------
+Run:
+
+    steghide embed -cf Cover.jpg -ef secret.txt
+
+You’ll be prompted to enter a passphrase. Remember this for extraction.
+
+📍 STEP 5: Extract Hidden Message
+------------------------------------
+Run:
+
+    steghide extract -sf Cover.jpg
+
+Enter the passphrase. If correct, it will write "secret.txt" back into the directory.
+
+📍 STEP 6: View Hidden Message
+-------------------------------
+To read the content:
+
+    cat secret.txt
+
+==============================
+📷 Screenshot Documentation
+==============================
+Save screenshots for the following steps:
+1. Installing Steghide
+2. Creating `secret.txt`
+3. Listing contents before embedding
+4. Running embed command
+5. Verifying success message
+6. Extracting the file
+7. Viewing the output
+
+============================
+📦 GitHub Project Structure
+============================
+
+Folder Structure:
+
+    steghide-project/
+    ├── README.md
+    ├── requirements.txt
+    ├── docs/
+    │   ├── project-report.md
+    │   └── screenshots/
+    │       ├── 01-installed-steghide.png
+    │       ├── 02-secret-message-file.png
+    │       ├── 03-embed-command.png
+    │       ├── 04-extract-command.png
+    │       └── 05-extracted-secret.png
+    ├── secret.txt
+    ├── Cover.jpg
+    └── embed_script.sh (optional automation script)
+
+===================
+📝 README.md Sample
+===================
+
+# Steganography with Steghide (Kali Linux)
+
+This project demonstrates how to embed and extract a secret message inside a JPEG image using Steghide. It's intended for beginner cybersecurity learners.
+
+## Tools Used
+- Kali Linux
+- Steghide
+- Bash Terminal
+
+## How to Use
+
+1. Create a secret file:
+   echo "The eagle flies at midnight..." > secret.txt
+
+2. Embed into image:
+   steghide embed -cf Cover.jpg -ef secret.txt
+
+3. Extract:
+   steghide extract -sf Cover.jpg
+
+## Author
+Your Name  
+Cybersecurity Enthusiast
+
+==========================
+📤 Uploading to GitHub
+==========================
+
+1. Create a GitHub repo: https://github.com/new
+
+2. In terminal:
+
+    cd ~/Desktop
+    mkdir steghide-project
+    cd steghide-project
+
+3. Add your files, then:
+
+    git init
+    git add .
+    git commit -m "Initial commit"
+    git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
+    git branch -M main
+    git push -u origin main
+
+====================
+✅ Project Complete!
+====================
+
+You now have a complete beginner cybersecurity project using steganography ready for your GitHub portfolio.
