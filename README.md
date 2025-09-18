@@ -82,10 +82,6 @@ steghide-project/
 └── embed_script.sh (optional)
 ```
 
----
 
-##  Author
-
-**Ihekweme Arinze**  
-Cybersecurity Enthusiast  
+ 
 
